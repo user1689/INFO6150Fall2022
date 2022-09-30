@@ -1,0 +1,111 @@
+body {
+  /* cancaling default margin and padding of body */
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  /* cancaling default margin and padding and list-style of ul */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#homepage {
+  /* setting for grid layout */
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 50px 1fr 50px;
+
+  width: 100%;
+  background-color: pink;
+}
+
+/* header */
+
+header {
+  /* corresponding to grid layout */
+  grid-column: span 5;
+
+  background-color: plum;
+}
+
+.menu {
+  /* setting for flex layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
+  height: 50px;
+}
+
+.menu li a{
+  /* changing tag a to inline-block 
+  for making the mouse over the entire area responsive 
+  not just when the mouse is over the <a>xxx</a> tag */
+  display: inline-block;
+  /* setting the line height to center the text vertically */
+  line-height: 50px;
+
+  padding: 0 15px 0 15px;
+}
+
+.menu li a:hover {
+  cursor: pointer;
+  color: white;
+  background-color: rebeccapurple;
+}
+
+/* local-menu */
+
+nav {
+  /* corresponding to grid layout */
+  grid-column: span 1;
+}
+
+.local-menu {
+  border-right: 2px solid black;
+}
+
+.local-menu ul {
+  padding: 20px 0px 10px 10px;
+}
+
+.local-menu ul li {
+  margin: 0px 0px 15px 0px;
+  padding: 10px;
+}
+
+.local-menu ul li:hover {
+  cursor: pointer;
+  background-color: plum;
+}
+
+/* main */
+
+main {
+  /* corresponding to grid layout */
+  grid-column: span 4;
+
+  padding: 5px 15px;
+}
+
+main p{
+  margin: 15px 0 15px 0;
+}
+
+/* footer */
+
+footer {
+  /* corresponding to grid layout */
+  grid-column: span 5;
+}
+
+footer {
+  /* setting the line height to center the text vertically */
+  line-height: 50px;
+
+  padding-left: 20px;
+  background-color: plum;
+}
+
