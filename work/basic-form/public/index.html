@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <header>
+            <h1>OnlyCats</h1>
+        </header>
+        <main>
+            <form action="http://localhost:3000/submit" method="post" class="">
+                <div class="title">
+                    <h1>Registration</h1>
+                </div>
+                <div class="input">
+                    <div class="input_box">
+                        <label>
+                            <span class="input_name">Name</span>
+                            <input
+                                name="name"
+                                type="text"
+                                placeholder="Enter your name"
+                                pattern="^[a-zA-Z0-9_-]{4,16}$"
+                                title="Please enter a username of length 4 to 16"
+                                required
+                            />
+                            <span class="required_mark">*</span>
+                        </label>
+                    </div>
+                    <div class="input_box">
+                        <label>
+                            <span class="input_name">Email</span>
+                            <input
+                                name="email"
+                                type="text"
+                                placeholder="Enter your email"
+                                pattern="^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$"
+                                title="Please enter a valid email"
+                                required
+                            />
+                            <span class="required_mark">*</span>
+                        </label>
+                    </div>
+                    <div class="input_box">
+                        <label>
+                            <span class="input_name"
+                                >Select Your Plan Tier</span
+                            >
+                            <select name="tier" required>
+                                <option value="">Please select</option>
+                                <option value="1">Silver Tier</option>
+                                <option value="2">Gold Tier</option>
+                                <option value="3">Platinum Tier</option>
+                            </select>
+                            <span class="required_mark">*</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="check_box">
+                    <label>
+                        <input type="checkbox" name="annoy_me" id="" checked/>
+                        <span class="check_box_text">
+                            Do you want us to send you annoying emails?
+                        </span>
+                    </label>
+                </div>
+                <div class="submit_button">
+                    <input type="submit" value="Register" />
+                </div>
+            </form>
+        </main>
+        <footer class="footer">
+            <a href="./Privacy.html">Privacy Policy</a> © Lanchuan Lin.
+        </footer>
+    </body>
+</html>
