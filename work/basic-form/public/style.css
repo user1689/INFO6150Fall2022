@@ -1,0 +1,223 @@
+/*
+
+default settings
+
+*/
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    /*
+    
+    settings for grid
+
+    */
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    min-height: 100%;
+    width: 100%;
+}
+
+/*
+
+header 
+
+*/
+
+header {
+    height: 4rem;
+    width: 100%;
+    background-color: black;
+}
+
+header h1 {
+    line-height: 4rem;
+    color: white;
+    margin-left: 1rem;
+}
+
+/*
+
+main
+
+*/
+
+main {
+    /*
+    
+    settings for flex
+
+    */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* form */
+
+form {
+    /*
+    
+    settings for flex
+
+    */
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 50rem;
+    padding: 4rem 4rem;
+    border-radius: 0.5rem;
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+}
+
+.title h1 {
+    font-weight: 500;
+}
+
+/* input */
+
+.input {
+    /*
+    
+    settings for flex
+
+    */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    height: 12rem;
+    width: 100%;
+    margin: 1rem 0 2rem 0;
+}
+
+.input_box {
+    width: 50%;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.input_box input,
+select {
+    width: 90%;
+    height: 2rem;
+    padding-left: 1rem;
+
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 0.4rem;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+}
+
+.input_box input:focus,
+.input_box select:focus {
+    border-color: black;
+}
+
+.input_box input:not(:placeholder-shown) {
+    border-color: black;
+}
+
+.input_box input:valid {
+    border: 1px solid #ccc;
+    border-bottom: 2px solid #ccc;
+}
+
+.input_name {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.check_box {
+    margin-top: 1rem;
+}
+
+.submit_button {
+    /*
+    
+    settings for flex
+
+    */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 2rem;
+    margin: 2rem 0;
+}
+
+.submit_button input {
+    height: 100%;
+    width: 50%;
+    font-size: 1rem;
+    text-align: center;
+
+    border: 0;
+    border-radius: 0.4rem;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+}
+
+.submit_button input:focus {
+    border-bottom: 2px solid black;
+}
+
+.submit_button input:active {
+    border-bottom: 0px solid #ccc;
+}
+
+/*
+
+footer
+
+*/
+
+.footer {
+    text-align: center;
+}
+
+.footer a {
+    color: black;
+    outline: none;
+}
+
+.footer a:focus {
+    display: inline-block;
+    background-color: black;
+    color: white;
+}
+
+@media screen and (max-width: 40rem) {
+    form {
+        max-width: 100%;
+    }
+
+    .title h1 {
+        text-align: center;
+    }
+
+    .input_box {
+        text-align: center;
+    }
+
+    .input_box {
+        margin: 0.4rem;
+        width: 100%;
+    }
+
+    .list_check {
+        margin-top: 2.5rem;
+    }
+}
