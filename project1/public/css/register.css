@@ -1,0 +1,460 @@
+/*
+
+default settings
+
+*/
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    /*
+  
+  settings for grid
+
+  */
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    min-height: 100%;
+    width: 100%;
+}
+
+/*
+
+header 
+
+*/
+
+/* header */
+
+/* logo */
+
+header {
+    /* settings for grid  */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+header .logo {
+    /* settings for grid  */
+    grid-column: span 12;
+
+    /* settings for flex  */
+    display: flex;
+    align-items: center;
+
+    background-color: black;
+    height: 100%;
+}
+
+header .logo h1 {
+    margin: auto;
+    padding-left: 0.8rem;
+    font-size: 2rem;
+    color: white;
+}
+
+header .logo img {
+    height: 100%;
+}
+
+header .logo a {
+    display: inline-block;
+    cursor: pointer;
+    height: 100%;
+}
+
+/* nav */
+
+header nav {
+    /* settings for grid  */
+    grid-column: span 12;
+
+    background-color: orange;
+}
+
+header .menubar__menu {
+    /* settings for flex  */
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+}
+
+header .menubar__menu li {
+    position: relative;
+    width: 100%;
+    height: 3rem;
+}
+
+header .menubar__menu li a,
+header .menubar__menu li label {
+    display: inline-block;
+    font-size: 1.4rem;
+
+    color: black;
+    line-height: 3rem;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* drop down */
+
+.dropdown__content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: orange;
+}
+
+header .menubar__menu .dropdown a:hover,
+header .menubar__menu .dropdown label:hover {
+    color: orange;
+    background-color: white;
+}
+
+/* side bar */
+
+.wrapper {
+    position: fixed;
+    background-color: orange;
+    height: 100%;
+    width: 40rem;
+    left: -40rem;
+    transition: all 0.4s ease;
+    z-index: 188;
+    overflow: hidden;
+}
+
+.sidebar {
+    padding: 4rem;
+}
+
+.sidebar .title span {
+    font-size: 3rem;
+}
+
+.sidebar .list-items span {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+    font-size: 2rem;
+}
+
+.sidebar .list-items ul {
+    margin-top: 1rem;
+}
+
+.sidebar .list-items ul li a {
+    font-size: 1.4rem;
+}
+
+.sidebar .close {
+    cursor: pointer;
+}
+
+#btn:checked ~ .wrapper {
+    left: 0;
+}
+
+#btn:checked ~ .modal {
+    width: 100%;
+}
+
+.modal {
+    position: fixed;
+    height: 100%;
+    width: 0%;
+    background-color: black;
+    opacity: 0.8;
+}
+
+/*
+
+main
+
+*/
+
+main {
+    margin: 0 auto;
+}
+
+.main__content {
+    /*
+    
+    settings for grid
+
+    */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    max-width: 62.5rem;
+    align-items: center;
+
+}
+
+/* form */
+
+form {
+    /*
+  
+  settings for flex
+
+  */
+
+    grid-column: 1 / 13;
+
+    display: flex;
+    flex-direction: column;
+
+    /* width: 100%; */
+    /* max-width: 50rem; */
+    margin: 10rem 0;
+    padding: 4rem 4rem;
+    border-radius: 0.5rem;
+    border: 1px solid black;
+    border-bottom: 2px solid black;
+}
+
+.title h1 {
+    font-weight: 500;
+}
+
+/* input */
+
+.input {
+    /*
+  
+  settings for flex
+
+  */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    height: 12rem;
+    width: 100%;
+    margin: 1rem 0 2rem 0;
+}
+
+.input_box {
+    width: 50%;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.input_box input,
+select {
+    width: 90%;
+    height: 2rem;
+    padding-left: 1rem;
+
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 0.4rem;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+}
+
+.input_box input:focus,
+.input_box select:focus {
+    border-color: black;
+}
+
+.input_box input:not(:placeholder-shown) {
+    border-color: black;
+}
+
+.input_box input:valid {
+    border: 1px solid #ccc;
+    border-bottom: 2px solid #ccc;
+}
+
+.input_name {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.check_box {
+    margin-top: 1rem;
+}
+
+.submit_button {
+    /*
+  
+  settings for flex
+
+  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 2rem;
+    margin: 2rem 0;
+}
+
+.submit_button input {
+    height: 100%;
+    width: 50%;
+    font-size: 1rem;
+    text-align: center;
+
+    border: 0;
+    border-radius: 0.4rem;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+}
+
+.submit_button input:focus {
+    border-bottom: 2px solid black;
+}
+
+.submit_button input:active {
+    border-bottom: 0px solid #ccc;
+}
+
+/*
+
+footer
+
+*/
+
+.footer {
+    background-color: orange;
+    width: 100%;
+}
+
+.footer__items {
+    /* settings for grid  */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.footer__items li {
+    /* settings for grid  */
+    grid-column: span 12;
+
+    margin: 1rem;
+    text-align: center;
+}
+
+.footer__items li a {
+    font-size: 1rem;
+    color: black;
+}
+
+@media screen and (max-width: 50rem) {
+    /* form */
+
+    form {
+        max-width: 100%;
+    }
+
+    .title h1 {
+        text-align: center;
+    }
+
+    .input_box {
+        text-align: center;
+    }
+
+    .input_box {
+        margin: 0.4rem;
+        width: 100%;
+    }
+
+    .list_check {
+        margin-top: 2.5rem;
+    }
+}
+
+@media (min-width: 50rem) {
+    /* body */
+
+    body {
+        width: 100%;
+    }
+
+    /* header */
+
+    header .logo {
+        /* settings for grid  */
+        grid-column: span 4;
+    }
+
+    header .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    /* navigation */
+
+    header nav {
+        /* settings for grid  */
+        grid-column: span 8;
+
+        background-color: orange;
+    }
+
+    header .menubar__menu {
+        /* settings for flex  */
+        flex-direction: row;
+    }
+
+    header .menubar__menu li a,
+    header .menubar__menu li label {
+        padding: 1.8rem 0 0 0;
+    }
+
+    /* drop down */
+
+    .dropdown:hover .dropdown__content {
+        display: block;
+    }
+
+    .dropdown:hover .dropdown__button {
+        background-color: white;
+    }
+
+    /* side bar */
+
+    .sidebar {
+        padding: 4rem;
+    }
+
+    .sidebar .title span {
+        font-size: 4rem;
+    }
+
+    .sidebar .list-items span {
+        display: inline-block;
+        font-size: 1.5rem;
+        margin-bottom: 0.4rem;
+        font-size: 2rem;
+    }
+
+    .sidebar .list-items ul {
+        margin-top: 1rem;
+    }
+
+    .sidebar .list-items ul li a {
+        font-size: 1.4rem;
+    }
+
+    /* footer */
+
+    .footer__items li {
+        /* settings for grid  */
+        grid-column: span 4;
+    }
+}
