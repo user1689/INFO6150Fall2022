@@ -1,0 +1,315 @@
+/* default settings */
+
+body,
+ul,
+h1,
+h3,
+a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    /*
+  
+  settings for grid
+
+  */
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    min-height: 100%;
+    width: 100%;
+}
+
+/* header */
+
+/* logo */
+
+header {
+    /* settings for grid  */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+header .logo {
+    /* settings for grid  */
+    grid-column: span 12;
+
+    /* settings for flex  */
+    display: flex;
+    align-items: center;
+
+    background-color: black;
+    height: 4.68rem;
+}
+
+header .logo h1 {
+    margin: auto;
+    padding-left: 0.8rem;
+    font-size: 2rem;
+    color: white;
+}
+
+
+header .logo img {
+    height: 100%;
+}
+
+header .logo a {
+    display: inline-block;
+    cursor: pointer;
+    height: 100%;
+}
+
+/* nav */
+
+header nav {
+    /* settings for grid  */
+    grid-column: span 12;
+
+    background-color: orange;
+}
+
+header .menubar__menu {
+    /* settings for flex  */
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+}
+
+header .menubar__menu li {
+    position: relative;
+    width: 100%;
+    height: 3rem;
+}
+
+header .menubar__menu li button {
+    font-size: 1.4rem;
+    border: 1px solid transparent; 
+    height: 2.68rem;
+    width: 100%;
+    cursor: pointer;
+    background-color: orange;
+}
+
+header .menubar__menu li a {
+    display: inline-block;
+    font-size: 1.4rem;
+    color: black;
+    line-height: 3rem;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* drop down */
+
+.dropdown__content__0, .dropdown__content__1, .dropdown__content__2{
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: orange;
+}
+
+/* main */
+
+main {
+    /* settings for grid  */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+main h2 {
+    /* settings for grid  */
+    grid-column: span 12;
+
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.main__content {
+    grid-column: span 12;
+
+    /* settings for grid  */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    margin-bottom: 4rem;
+}
+
+/* card */
+
+.card {
+    /* settings for grid  */
+    grid-column: span 12;
+
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+
+    border: 1.8px solid black;
+    border-bottom: 4px solid black;
+    margin: 0.5rem;
+}
+
+.card__img {
+    margin: 2rem;
+}
+
+.card__img img {
+    width: 100%;
+}
+
+.card h3,
+p,
+a {
+    text-align: center;
+}
+
+.card__title {
+    font-size: 1.4rem;
+}
+
+.card p {
+    padding: 0 1rem;
+    font-size: 1.4rem;
+}
+
+.card__button {
+    padding: 0.8rem;
+    margin: 1rem;
+    width: fit-content;
+    justify-self: center;
+
+    background-color: orange;
+    color: black;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+}
+
+.card__button:hover {
+    background-color: white;
+    color: orange;
+}
+
+/* footer */
+
+.footer {
+    background-color: orange;
+    width: 100%;
+}
+
+.footer__items {
+    /* settings for grid  */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.footer__items li {
+    /* settings for grid  */
+    grid-column: span 12;
+
+    margin: 1rem;
+    text-align: center;
+}
+
+.footer__items li a {
+    font-size: 1rem;
+    color: black;
+}
+
+/* media */
+
+@media (min-width: 50rem) {
+    /* body */
+
+    body {
+        width: 100%;
+    }
+
+    /* header */
+
+    header .logo {
+        /* settings for grid  */
+        grid-column: span 4;
+    }
+
+    header .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    /* navigation */
+
+    header nav {
+        /* settings for grid  */
+        grid-column: span 8;
+
+        background-color: orange;
+    }
+
+    header .menubar__menu {
+        /* settings for flex  */
+        flex-direction: row;
+    }
+
+    header .menubar__menu li a,
+    label {
+        padding: 1.8rem 0 0 0;
+    }
+
+    header .menubar__menu li button {
+        height: 4.68rem;
+    }
+
+    /* drop down */
+
+    .open {
+      display: block;
+    }
+    
+
+    /* main */
+
+    main {
+        margin-bottom: 2rem;
+    }
+
+    .main__wrapper {
+        /*
+        settings for grid
+        */
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+
+        max-width: 62.5rem;
+        align-items: center;
+        
+    }
+
+    .main__content {
+        max-width: 62.5rem;
+        margin: 0 auto;
+    }
+
+    .card {
+        /* settings for grid  */
+        grid-column: span 4;
+    }
+
+    /* footer */
+
+    .footer__items li {
+        /* settings for grid  */
+        grid-column: span 4;
+    }
+}
