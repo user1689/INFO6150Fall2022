@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <header>
+            <h1>OnlyCats</h1>
+        </header>
+        <main>
+            <form action="http://localhost:3000/register" method="post" id="form">
+                <div class="title">
+                    <h1>Registration</h1>
+                </div>
+                
+                <div class="input">
+
+                    <div class="input_box">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" autocomplete="off">
+                        <span class="required_mark">*</span>
+                    </div>
+
+                    <div class="input_box">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email" autocomplete="off">
+                        <span class="required_mark">*</span>
+                    </div>
+
+                    <div class="input_box">
+                        <label for="confirm_email" name="confirm_email">Confirm Email:</label>
+                        <input type="text" id="confirm_email" autocomplete="off">
+                        <span class="required_mark">*</span>
+                    </div>
+
+                    <div class="input_box">
+                        <label for="tier">Select Your Plan Tier:</label>
+                        <select name="tier" id="tier">
+                            <option value="">Please select</option>
+                            <option value="1">Silver Tier</option>
+                            <option value="2">Gold Tier</option>
+                            <option value="3">Platinum Tier</option>
+                        </select>
+                    </div>
+                    
+
+                    <div class="check_box">
+                        <label>
+                            <input type="checkbox" name="wants-spam" checked/>
+                            <span class="check_box_text">
+                                Do you want spam?
+                            </span>
+                        </label>
+                    </div>
+                    
+
+                    <span class="error" id="error_name">Name is Empty</span>
+                    <span class="error" id="error"></span>
+                    
+
+                </div>
+
+                <div class="submit_button">
+                    <input type="submit" value="Register" />
+                </div>
+            </form>
+        </main>
+        <footer class="footer">
+            <a href="./Privacy.html">Privacy Policy</a> © Lanchuan Lin.
+        </footer>
+        <script src="./index.js"></script>
+    </body>
+</html>
