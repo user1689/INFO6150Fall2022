@@ -1,0 +1,4 @@
+.content__text {
+  grid-column: span 12;
+  font-size: 1.4rem;
+}

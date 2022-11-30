@@ -1,0 +1,142 @@
+/* header */
+
+/* logo */
+
+header {
+  /* settings for grid  */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+header .logo {
+  /* settings for grid  */
+  grid-column: span 12;
+
+  /* settings for flex  */
+  display: flex;
+  align-items: center;
+
+  background-color: black;
+  height: 100%;
+}
+
+header .logo h1 {
+  margin: auto;
+  padding-left: 0.8rem;
+  font-size: 2rem;
+  color: white;
+}
+
+
+header .logo img {
+  height: 100%;
+}
+
+header .logo a {
+  display: inline-block;
+  cursor: pointer;
+  height: 100%;
+}
+
+/* nav */
+
+header nav {
+  /* settings for grid  */
+  grid-column: span 12;
+
+  background-color: orange;
+}
+
+header .menubar__menu {
+  /* settings for flex  */
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+}
+
+header .menubar__menu li {
+  position: relative;
+  width: 100%;
+  height: 3rem;
+}
+
+header .menubar__menu li a,
+header .menubar__menu li label {
+  display: inline-block;
+  font-size: 1.4rem;
+
+  color: black;
+  line-height: 3rem;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* drop down */
+
+.dropdown__content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background-color: orange;
+}
+
+header .menubar__menu .dropdown a:hover,
+header .menubar__menu .dropdown label:hover {
+  color: orange;
+  background-color: white;
+}
+
+
+/* media */
+
+@media (min-width: 44rem) {
+  /* body */
+
+  body {
+      width: 100%;
+  }
+
+  /* header */
+
+  header .logo {
+      /* settings for grid  */
+      grid-column: span 4;
+  }
+
+  header .logo h1 {
+      font-size: 1.5rem;
+  }
+
+  /* navigation */
+
+  header nav {
+      /* settings for grid  */
+      grid-column: span 8;
+
+      background-color: orange;
+  }
+
+  header .menubar__menu {
+      /* settings for flex  */
+      flex-direction: row;
+  }
+
+  header .menubar__menu li a,
+  label {
+      padding: 1.8rem 0 0 0;
+  }
+
+  /* drop down */
+
+  .dropdown:hover .dropdown__content {
+      display: block;
+  }
+
+  .dropdown:hover .dropdown__button {
+      background-color: white;
+  }
+
+}
