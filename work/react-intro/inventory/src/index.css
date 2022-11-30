@@ -1,0 +1,11 @@
+
+#app {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 100px auto;
+  width: 180px;
+}
+
+input {
+  margin-left: 1rem;
+}
