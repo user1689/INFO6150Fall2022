@@ -1,0 +1,296 @@
+/* default settings */
+
+body,
+ul,
+h1,
+h3,
+a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    min-height: 100%;
+    width: 100%;
+    background-color: papayawhip;
+}
+
+/* skip link */
+
+.skiplink {
+    font-size: 1.2rem;
+    background: burlywood;
+    left: 50%;
+    position: absolute;
+    transform: translateY(-100%);
+    transition: transform;
+}
+
+.skiplink:focus {
+    transform: translateY(0%);
+}
+
+/* logo */
+
+header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    border-bottom: 2px solid black;
+}
+
+header .logo {
+    grid-column: span 11;
+    display: flex;
+    align-items: center;
+
+    background-color: burlywood;
+    height: 100%;
+}
+
+header .logo h1 {
+    margin: auto;
+    padding-left: 1rem;
+}
+
+header .logo img {
+    height: 100%;
+}
+
+header .logo a {
+    display: inline-block;
+    height: 100%;
+}
+
+/* drop down */
+
+.dropdown {
+    grid-column: span 1;
+    position: relative;
+    background-color: burlywood;
+}
+
+.dropdown a {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    padding: 0 0.5rem;
+    display: inline-block;
+}
+
+.dropdown li {
+    height: 1.6;
+}
+
+.dropdown a:hover {
+    color: white;
+    background-color: blue;
+}
+
+.dropdown__button div {
+    width: 2.2rem;
+    height: 0.25rem;
+    background-color: black;
+    margin: 0.5rem 0;
+}
+
+.dropdown__button {
+    margin: 0 0.5rem;
+    border: 1px solid transparent;
+    height: 100%;
+    background-color: burlywood;
+}
+
+.dropdown__content {
+    display: none;
+    position: absolute;
+    background-color: burlywood;
+    min-width: 160px;
+    right: 0;
+}
+
+.open {
+    display: block;
+}
+
+/* nav */
+
+header nav {
+    display: none;
+    background-color: burlywood;
+}
+
+header .menubar__menu {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+}
+
+header .menubar__menu li {
+    width: 100%;
+    text-align: center;
+}
+
+header .menubar__menu li a {
+    display: inline-block;
+    font-size: 1.2rem;
+
+    line-height: 1.6;
+}
+
+header .menubar__menu li a:hover {
+    color: white;
+    background-color: blue;
+}
+
+/* main */
+
+main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+main h2 {
+    grid-column: span 12;
+    text-align: center;
+}
+
+/* card */
+
+.card {
+    grid-column: span 12;
+    background-color: white;
+    border: 2px solid black;
+    margin-top: -2px;
+}
+
+.card__img__right {
+    margin-left: 0.5rem;
+    float: right;
+}
+
+.card__img__left {
+    margin-left: 0.5rem;
+    float: left;
+}
+
+.card__img__right img,
+.card__img__left img {
+    width: 125px;
+    margin: 0.5rem;
+}
+
+.card h3 {
+    text-align: center;
+    margin: 0.5rem;
+}
+
+.card p {
+    padding: 0 1rem;
+    font-size: 1.2rem;
+}
+
+/* footer */
+
+.footer {
+    background-color: burlywood;
+}
+
+.footer__items {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.footer__items li {
+    grid-column: span 12;
+
+    margin: 1rem;
+    text-align: center;
+}
+
+.footer__items li a {
+    font-size: 1rem;
+}
+
+/* media */
+
+@media (min-width: 44rem) {
+    /* body */
+
+    body {
+        width: 100%;
+    }
+
+    /* header */
+
+    header {
+        border-bottom: transparent;
+    }
+
+    header .logo {
+        grid-column: span 12;
+    }
+
+    /* navigation */
+
+    header nav {
+        display: block;
+        grid-column: span 12;
+
+        background-color: burlywood;
+    }
+
+    header .menubar__menu {
+        flex-direction: row;
+    }
+
+    .dropdown {
+        display: none;
+    }
+
+    /* main */
+
+    main {
+        margin-bottom: 2rem;
+        margin: 0 auto;
+    }
+
+    .card {
+        display: flex;
+    }
+
+    .card {
+        grid-column: span 12;
+        margin: 0.5rem;
+    }
+
+    .card__img__right,
+    .card__img__left {
+        margin: 0 auto;
+    }
+
+    .card__img__right img,
+    .card__img__left img {
+        width: 93%;
+        min-width: 200px;
+        margin: 0.5rem;
+    }
+
+    .card h3 {
+        text-align: center;
+    }
+
+    /* footer */
+
+    .footer__items li {
+        grid-column: span 3;
+    }
+}

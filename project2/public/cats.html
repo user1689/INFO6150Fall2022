@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+        <title>Cats</title>
+    </head>
+    <body>
+        <div id="myModal" class="modal">
+            <div class="modal__content">
+                <form
+                    class="model__form"
+                    id="form"
+                    action="http://localhost:3000/subscribe"
+                    method="post"
+                >
+                    <h2>Subscribe to the Latest Mews!</h2>
+                    <div class="input">
+                        <div class="input_box">
+                            <label class="input_name" for="email"
+                                >Email: &nbsp; <span>* required</span></label
+                            >
+                            <input
+                                type="text"
+                                id="email"
+                                name="email"
+                                autocomplete="off"
+                            />
+                        </div>
+                        <span class="error" id="error_email">&nbsp;</span>
+                        <div class="input_box">
+                            <label
+                                class="input_name"
+                                for="confirm_email"
+                                name="confirm_email"
+                                >Confirm Email: &nbsp;
+                                <span>* required</span></label
+                            >
+                            <input
+                                type="text"
+                                id="confirm_email"
+                                autocomplete="off"
+                            />
+                        </div>
+                        <span class="error" id="error_confirmemail"
+                            >&nbsp;</span
+                        >
+                        <div class="button">
+                            <input
+                                type="submit"
+                                class="button__submit"
+                                value="Subscribe"
+                            />
+                            <input
+                                type="button"
+                                class="button__cancel"
+                                value="Cancel"
+                            />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <a class="skiplink" href="#main"> Skip to Content </a>
+        <header>
+            <div class="logo">
+                <a href="./index.html"
+                    ><img src="http://placekitten.com/100/100" alt=""
+                /></a>
+
+                <h1>Famous Internet Cats</h1>
+            </div>
+            <nav class="menubar">
+                <ul class="menubar__menu">
+                    <li>
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="./cats.html">Famous Cats</a>
+                    </li>
+                    <li>
+                        <a href="./CatEvents.html">Cat Events</a>
+                    </li>
+                </ul>
+            </nav>
+            <li class="dropdown">
+                <button class="dropdown__button">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+                <div class="dropdown__content">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./cats.html">Famous Cats</a></li>
+                        <li><a href="./CatEvents.html">Cat Events</a></li>
+                    </ul>
+                </div>
+            </li>
+        </header>
+        <main id="main">
+            <!-- <h2>Cats in the News</h2> -->
+            <div class="card">
+                <h2 class="card__title">Jorts</h2>
+                <div class="card__img">
+                    <img
+                        src="http://placekitten.com/249/249"
+                        alt="Image of Russian blue kitty"
+                    />
+                </div>
+                <p>
+                    Dolor nulla repellendus quisquam optio in. In
+                    optiodistinctio doloremque
+                </p>
+                <p>
+                    lpsum lorem sit
+                    <a href="#" id="myBtn" class="myBtn">Subscribe</a> voluptate
+                    inventore.
+                </p>
+            </div>
+            <div class="card">
+                <h2 class="card__title">Jean</h2>
+                <div class="card__img">
+                    <img
+                        src="http://placekitten.com/249/249"
+                        alt="Image of American shorthair leopard"
+                    />
+                </div>
+                <p>
+                    Dolor nulla repellendus quisquam optio in. In
+                    optiodistinctio doloremque
+                </p>
+                <p>
+                    lpsum lorem sit
+                    <a href="#" class="myBtn">Subscribe</a> voluptate inventore.
+                </p>
+            </div>
+            <div class="card">
+                <h2 class="card__title">Maru</h2>
+                <div class="card__img">
+                    <img
+                        src="http://placekitten.com/249/249"
+                        alt="Image of Havana brown ocelot"
+                    />
+                </div>
+                <p>
+                    Dolor nulla repellendus quisquam optio in. In
+                    optiodistinctio doloremque
+                </p>
+                <p>
+                    Dolor nulla repellendus quisquam optio in. In
+                    optiodistinctio doloremque
+                </p>
+                <p>
+                    lpsum lorem sit
+                    <a href="#" id="" class="myBtn">Subscribe</a> voluptate
+                    inventore.
+                </p>
+            </div>
+            <div class="card">
+                <h2 class="card__title">Nyancat</h2>
+                <div class="card__img">
+                    <img
+                        src="http://placekitten.com/249/249"
+                        alt="Image of Devonshire rex"
+                    />
+                </div>
+                <p>
+                    Dolor nulla repellendus quisquam optio in. In
+                    optiodistinctio doloremque
+                </p>
+                <p>
+                    lpsum lorem sit
+                    <a href="#" id="myBtn" class="myBtn">Subscribe</a> voluptate
+                    inventore.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2 class="card__title">Grumpy Cat</h2>
+                <div class="card__img">
+                    <img
+                        src="http://placekitten.com/249/249"
+                        alt="Image of Devonshire rex"
+                    />
+                </div>
+                <p>
+                    Dolor nulla repellendus quisquam optio in. In
+                    optiodistinctio doloremque
+                </p>
+                <p>
+                    lpsum lorem sit
+                    <a href="#" id="myBtn" class="myBtn">Subscribe</a> voluptate
+                    inventore.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2 class="card__title">Lil Bub</h2>
+                <div class="card__img">
+                    <img
+                        src="http://placekitten.com/249/249"
+                        alt="Image of Devonshire rex"
+                    />
+                </div>
+                <p>
+                    Dolor nulla repellendus quisquam optio in. In
+                    optiodistinctio doloremque
+                </p>
+                <p>
+                    lpsum lorem sit
+                    <a href="#" id="myBtn" class="myBtn">Subscribe</a> voluptate
+                    inventore.
+                </p>
+            </div>
+        </main>
+        <footer class="footer">
+            <ul class="footer__items">
+                <li>
+                    <a href="./Privacy.html">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="./AboutUs.html">Work for Us</a>
+                </li>
+                <li>
+                    <a href="./ContactUs.html">Contact Us</a>
+                </li>
+                <li>
+                    <a href="./SocialMedia.html">Social Media</a>
+                </li>
+            </ul>
+        </footer>
+        <script src="./js/dropdown.js"></script>
+        <script src="./js/modal.js"></script>
+        <script src="./js/form.js"></script>
+    </body>
+</html>
