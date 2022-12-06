@@ -1,0 +1,9 @@
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.reorder__button {
+  animation-name: fadeIn;
+  animation-duration: 4s;
+}
