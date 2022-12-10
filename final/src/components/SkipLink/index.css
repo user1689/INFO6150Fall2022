@@ -1,0 +1,19 @@
+
+/* settings for prefers-reduced-motion  */
+
+@media (prefers-reduced-motion: no-preference) {
+    /* skip link */
+
+    .skiplink {
+        font-size: 1.2rem;
+        background: burlywood;
+        left: 50%;
+        position: absolute;
+        transform: translateY(-100%);
+        transition: transform;
+    }
+
+    .skiplink:focus {
+        transform: translateY(0%);
+    }
+}

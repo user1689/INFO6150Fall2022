@@ -1,0 +1,25 @@
+/* images gallery */
+
+.gallery__image {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column: span 12;
+  grid-gap: 0.625rem;
+  margin: 2rem;
+}
+
+.gallery__image img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.gallery__image img:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 44rem) {
+  .gallery__image {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

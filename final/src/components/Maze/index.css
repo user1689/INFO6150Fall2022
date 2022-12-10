@@ -1,0 +1,189 @@
+/* theme for maze container */
+
+.light__maze__container {
+    margin-top: 1rem;
+    grid-column: span 12;
+}
+
+.dark__maze__container {
+    margin-top: 1rem;
+    padding-bottom: 4rem;
+    grid-column: span 12;
+    background-color: #1e1e1e;
+}
+
+/* maze content  */
+
+.maze__content {
+    /* width: 1250px; */
+    width: 350px;
+    background-color: yellow;
+    margin: 50px auto auto auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.maze__row {
+    display: flex;
+}
+
+.maze__annotations {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.maze__start {
+    width: 25px;
+    height: 25px;
+    background-image: url('../../../public/images/the-lucky-neko-PqTcWUXtgQg-unsplash.jpg');
+    background-size: 25px;
+    /* background-color: orange; */
+    outline: 1px solid black;
+    /* outline: 1px solid black; */
+}
+
+.maze__end {
+    width: 25px;
+    height: 25px;
+    background-image: url('../../../public/images/the-lucky-neko-w2ii07oH92s-unsplash.jpg');
+    background-size: 25px;
+    /* background-color: pink; */
+    outline: 1px solid black;
+    margin-left: 10px;
+}
+
+.maze__wall {
+    width: 25px;
+    height: 25px;
+    background-color: black;
+    outline: 1px solid black;
+    margin-left: 10px;
+    /* outline: 1px solid black; */
+}
+
+
+.maze__unvisited {
+    width: 25px;
+    height: 25px;
+    outline: 1px solid black;
+    background-color: white;
+    margin-left: 10px;
+    /* outline: 1px solid black; */
+}
+
+/* theme for start and end point */
+
+.dark__maze__start__name {
+    color: #b48bf8;
+    margin-left: 4px;
+    margin-top: 4px;
+}
+
+.dark__maze__end__name {
+    color: #b48bf8;
+    margin-left: 4px;
+    margin-top: 4px;
+}
+
+.dark__maze__wall__name {
+    color: #b48bf8;
+    margin-left: 4px;
+    margin-top: 4px;
+}
+
+.dark__maze__unvisited__name {
+    color: #b48bf8;
+    margin-left: 4px;
+    margin-top: 4px;
+}
+
+.light__maze__start__name {
+    margin-left: 4px;
+    margin-top: 4px;
+}
+
+.light__maze__end__name {
+    margin-left: 4px;
+    margin-top: 4px;
+}
+
+.light__maze__wall__name {
+    margin-left: 4px;
+    margin-top: 4px;
+}
+
+.light__maze__unvisited__name {
+    margin-left: 4px;
+    margin-top: 4px;
+}
+
+/* button */
+
+.maze__buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.maze__button {
+    margin-top: 40px;
+    margin-left: 10px;
+    text-align: center;
+    /* margin: 0 auto; */
+    display: inline-block;
+    padding: 1em 1em;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    /* outline: 0; */
+}
+
+
+.maze__button:active {
+  background-color: white;
+  color: black;
+}
+
+/* style for drag */
+
+.maze__row .dragstart__color {
+    background-color: white;
+    background-image: none;
+}
+
+.maze__row .leave__color {
+    background-color: white;
+    background-image: none;
+}
+
+.maze__row .start__dragenter__color {
+    background-image: url('../../../public/images/the-lucky-neko-PqTcWUXtgQg-unsplash.jpg');
+    background-size: 25px;
+}
+
+.maze__row .end__dragenter__color {
+    background-image: url('../../../public/images/the-lucky-neko-w2ii07oH92s-unsplash.jpg');
+    background-size: 25px;
+}
+
+.maze__row .start__dragend__error__color {
+    background-image: url('../../../public/images/the-lucky-neko-PqTcWUXtgQg-unsplash.jpg');
+    background-size: 25px;
+}
+
+.maze__row .start__dragend__color {
+    background-image: url('../../../public/images/the-lucky-neko-PqTcWUXtgQg-unsplash.jpg');
+    background-size: 25px;
+}
+
+.maze__content .maze__row .wall {
+    background-color: black;
+}
+
+.error__center {
+    margin-top: 1rem;
+    display: block;
+    text-align: center;
+}

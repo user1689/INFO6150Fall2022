@@ -1,0 +1,101 @@
+/* style for node  */
+
+.node {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    outline: 1px solid black;
+}
+
+.node__start {
+    background-image: url('../../../public/images/the-lucky-neko-PqTcWUXtgQg-unsplash.jpg');
+    background-size: 25px;
+}
+
+.node__end {
+    background-image: url('../../../public/images/the-lucky-neko-w2ii07oH92s-unsplash.jpg');
+    background-size: 25px;
+}
+
+.node__wall {
+    background-color: black;
+}
+
+.node__visited {
+  background-color: #b48bf8;
+  animation: none;
+}
+
+.node__shortest__path {
+  background-color: yellow;
+  animation: none;
+}
+
+/* settings for prefers-reduced-motion  */
+
+@media (prefers-reduced-motion: no-preference) {
+    .node__visited {
+        animation-name: visitedAnimation;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-out;
+        animation-delay: 0;
+        animation-direction: alternate;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+    }
+
+    @keyframes visitedAnimation {
+        0% {
+            transform: scale(0.3);
+            background-color: rgba(0, 0, 66, 0.75);
+            border-radius: 100%;
+        }
+
+        50% {
+            background-color: rgba(17, 104, 217, 0.75);
+        }
+
+        75% {
+            transform: scale(1.2);
+            background-color: rgba(0, 217, 159, 0.75);
+        }
+
+        100% {
+            transform: scale(1);
+            background-color: rgba(0, 190, 218, 0.75);
+        }
+    }
+
+    .node__shortest__path {
+        animation-name: shortestPath;
+        animation-duration: 1.5s;
+        animation-timing-function: ease-out;
+        animation-delay: 0;
+        animation-direction: alternate;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+    }
+
+    @keyframes shortestPath {
+        0% {
+            transform: scale(0.6);
+            background-color: rgb(255, 254, 106);
+        }
+
+        50% {
+            transform: scale(1.2);
+            background-color: rgb(255, 254, 106);
+        }
+
+        100% {
+            transform: scale(1);
+            background-color: rgb(255, 254, 106);
+        }
+    }
+}
+
+  
+    
+ 

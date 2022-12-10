@@ -1,0 +1,380 @@
+/* header */
+
+/* logo */
+
+header {
+    /* settings for grid  */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+header .logo {
+    /* settings for grid  */
+    grid-column: span 11;
+
+    /* settings for flex  */
+    display: flex;
+    align-items: center;
+
+    background-color: black;
+    height: 100%;
+}
+
+header .logo h1 {
+    margin: auto;
+    padding-left: 0.8rem;
+    font-size: 2rem;
+    color: white;
+}
+
+header .logo img {
+    height: 100%;
+}
+
+header .logo a {
+    display: inline-block;
+    cursor: pointer;
+    height: 100%;
+}
+
+/* nav */
+
+header nav {
+    /* settings for grid  */
+    grid-column: span 12;
+
+    background-color: orange;
+}
+
+header .menubar__menu {
+    /* settings for flex  */
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+}
+
+header .menubar__menu .dropdown {
+    position: relative;
+    width: 100%;
+    height: 3rem;
+}
+
+ 
+
+.menubar {
+    display: none;
+}
+
+/* drop down */
+
+.dropdown__content {
+    /* display: none; */
+    position: absolute;
+    width: 100%;
+    background-color: orange;
+}
+
+.dropdown a {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    line-height: 3rem;
+    /* height: 100%; */
+    width: 100%;
+}
+
+.dropdown__button {
+    font-size: 1.4rem;
+    line-height: 3rem;
+}
+
+.line {
+    height: 0.2rem;
+    width: 8rem;
+    margin: 0 auto 0.5rem auto;
+}
+
+.light__dropdown__a {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.light__dropdown__a:hover .line{
+    background-color: black;
+}
+
+.dark__dropdown__a {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.dark__dropdown__a:hover .line{
+    background-color: #b48bf8;
+}
+
+
+/* hamburger menu */
+
+.hamburgermenu {
+    /* settings for grid  */
+    grid-column: span 1;
+    position: relative;
+    background-color: orange;
+}
+
+.hamburgermenu__button {
+    display: inline-block;
+    line-height: 100%;
+    height: 100%;
+    width: 100%;
+    background-color: orange;
+    cursor: pointer;
+    position: relative;
+}
+
+.hamburgermenu__fakebutton {
+    height: 5rem;
+    width: 4rem;
+    position: absolute;
+    border: 1px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.hamburgermenu__button span {
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.hamburgermenu__button div {
+    width: 2.2rem;
+    height: 0.25rem;
+    background-color: black;
+    margin: 0.5rem 1rem;
+}
+
+.hamburgermenu__content li {
+    height: 1.6;
+}
+
+.hamburgermenu__content a {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    padding: 0 0.5rem;
+    width: 100%;
+    display: inline-block;
+}
+
+
+.hamburgermenu__content {
+    height: 9rem;
+    position: absolute;
+    background-color: orange;
+    min-width: 10rem;
+    right: 0;
+}
+
+/* accordian */
+
+.accordian__panel {
+    overflow: hidden;
+    background-color: white;
+}
+
+
+/* user */
+
+.user__status {
+    display: flex;
+}
+
+.light__user__status {
+    display: flex;
+    background-color: orange;
+}
+
+.dark__user__status {
+    display: flex;
+    background-color:#b48bf8;
+}
+
+
+.user__avatar {
+    margin-top: 0.8rem;
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: black 2px solid;
+    position: relative;
+}
+
+.avatar__fakebutton {
+    top: 0.69rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+.user__unlogin {
+    cursor: pointer;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.userunlogin__fakebutton {
+    top: 1rem;
+    left: 4.95rem;
+    height: 3rem;
+    width: 4rem;
+    position: absolute;
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+.button__wrapper {
+    margin-left: 0.25rem;
+}
+
+/* comment */
+
+.comment__show {
+  width: 5rem;
+  height: 3rem;
+}
+
+.comment__wrapper {
+  position: relative;
+}
+
+.comment__panel {
+  display: none;
+  position: absolute;
+  top: 4rem;
+  left: -0.5rem;
+}
+
+.comment__panel__userinfo {
+    display: none;
+    position: absolute;
+    top: 5rem;
+    left: -1.5rem;
+  }
+
+.comment__panel:hover {
+  display: block;
+}
+
+.comment__show:hover + .comment__panel {
+  display: block;
+}
+
+.comment__back {
+  width: 100px;
+  background-color: white;
+  border: 2px solid black;
+}
+
+.li__style {
+  text-align: center;
+  color: black;
+}
+
+.comment__corner {
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  border: 2px solid black;
+  position: relative;
+  left: 43px;
+  top: -7px;
+  transform: rotate(45deg);
+  border-right: 0px;
+  border-bottom: 0px;
+}
+
+/* theme */
+
+.dark__border {
+    border: 2px solid #b48bf8;
+}
+
+.dark__border__corner {
+    border: 2px solid #b48bf8;
+    border-right: 0px;
+    border-bottom: 0px;
+}
+
+.dark__header {
+    background-color: #1e1e1e;
+    color: #b48bf8;
+}
+
+.dark__hamburger__button {
+    background-color: #b48bf8;
+}
+
+
+
+
+/* media */
+
+@media (min-width: 44rem) {
+    /* body */
+
+    body {
+        width: 100%;
+    }
+
+    /* header */
+
+    header .logo {
+        /* settings for grid  */
+        grid-column: span 4;
+    }
+
+    header .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    /* navigation */
+
+    header nav {
+        /* settings for grid  */
+        grid-column: span 8;
+
+        background-color: orange;
+    }
+
+    header .menubar__menu {
+        /* settings for flex  */
+        flex-direction: row;
+    }
+
+    header .menubar__menu li a {
+        padding: 2rem 0 0 0;
+    }
+
+    /* drop down */
+
+    .menubar {
+        display: block;
+    }
+
+    .dark__active {
+        background-color: #343434;
+    }
+
+    .light__active {
+        background-color: white;
+    }
+
+    .hamburgermenu {
+        display: none;
+    }
+
+}
