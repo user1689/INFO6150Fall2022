@@ -15,7 +15,7 @@ export default class index extends Component {
             openHamburger: false,
             openGallery: false,
             openAccordian1: false,
-            openAccordian2: false
+            openAccordian2: false,
         };
     }
     handleOpen = (event) => {
@@ -32,11 +32,11 @@ export default class index extends Component {
         }
     };
     openAccordianHandler = (event) => {
-        const {openAccordian1, openAccordian2} = this.state;
-        if (event.target.id === "accordian1") {   
-            this.setState({openAccordian1: !openAccordian1});
+        const { openAccordian1, openAccordian2 } = this.state;
+        if (event.target.id === "accordian1") {
+            this.setState({ openAccordian1: !openAccordian1 });
         } else if (event.target.id === "accordian2") {
-            this.setState({openAccordian2: !openAccordian2});
+            this.setState({ openAccordian2: !openAccordian2 });
         }
     };
     render() {
@@ -56,18 +56,20 @@ export default class index extends Component {
             logoutHandler,
             handleClick,
         } = this.props;
-        const { openHome, openAbout, openHamburger, openAccordian1, openAccordian2 } = this.state;
+        const {
+            openHome,
+            openAbout,
+            openHamburger,
+            openAccordian1,
+            openAccordian2,
+        } = this.state;
         let extraClassNameForHome = null,
             extraClassNameForAbout = null;
-        // extraClassNameForRegister = null;
         if (pageIdx === 0 || pageIdx === 3 || pageIdx === 6) {
             extraClassNameForHome = `${theme}__active`;
         } else if (pageIdx === 1 || pageIdx === 4) {
             extraClassNameForAbout = `${theme}__active`;
         }
-        // const extraClassNameForThemeButton =
-        //     theme === "light" ? "button__wrapper" : null;
-        // const extraClassNameForAvatar = theme == "dark" ? "dark__border" : null;
         return (
             <>
                 {modalOpen ? (
@@ -285,26 +287,28 @@ export default class index extends Component {
                                         >
                                             Home
                                         </a>
-                                        { openAccordian1 === true ? <div className="accordian__panel">
-                                            <a
-                                                href="#"
-                                                id="id__home"
-                                                className={`${theme}__dropdown__a ${theme}__header`}
-                                                onClick={handleClick}
-                                            >
-                                                Home Page
-                                                <div className="line"></div>
-                                            </a>
-                                            <a
-                                                href="#"
-                                                id="id__gallery"
-                                                className={`${theme}__dropdown__a ${theme}__header`}
-                                                onClick={handleClick}
-                                            >
-                                                Images Gallery
-                                                <div className="line"></div>
-                                            </a>
-                                        </div> : null}
+                                        {openAccordian1 === true ? (
+                                            <div className="accordian__panel">
+                                                <a
+                                                    href="#"
+                                                    id="id__home"
+                                                    className={`${theme}__dropdown__a ${theme}__header`}
+                                                    onClick={handleClick}
+                                                >
+                                                    Home Page
+                                                    <div className="line"></div>
+                                                </a>
+                                                <a
+                                                    href="#"
+                                                    id="id__gallery"
+                                                    className={`${theme}__dropdown__a ${theme}__header`}
+                                                    onClick={handleClick}
+                                                >
+                                                    Images Gallery
+                                                    <div className="line"></div>
+                                                </a>
+                                            </div>
+                                        ) : null}
                                     </li>
                                     <li>
                                         <a
@@ -314,24 +318,26 @@ export default class index extends Component {
                                         >
                                             About
                                         </a>
-                                       {openAccordian2 === true ? <div className="accordian__panel">
-                                            <a
-                                                href="#"
-                                                id="id__about"
-                                                className={`${theme}__dropdown__a ${theme}__header`}
-                                            >
-                                                About Us
-                                                <div className="line"></div>
-                                            </a>
-                                            <a
-                                                href="#"
-                                                id="id__contact"
-                                                className={`${theme}__dropdown__a ${theme}__header`}
-                                            >
-                                                Contact Us
-                                                <div className="line"></div>
-                                            </a>
-                                        </div> : null}
+                                        {openAccordian2 === true ? (
+                                            <div className="accordian__panel">
+                                                <a
+                                                    href="#"
+                                                    id="id__about"
+                                                    className={`${theme}__dropdown__a ${theme}__header`}
+                                                >
+                                                    About Us
+                                                    <div className="line"></div>
+                                                </a>
+                                                <a
+                                                    href="#"
+                                                    id="id__contact"
+                                                    className={`${theme}__dropdown__a ${theme}__header`}
+                                                >
+                                                    Contact Us
+                                                    <div className="line"></div>
+                                                </a>
+                                            </div>
+                                        ) : null}
                                     </li>
                                     <li>
                                         <div
@@ -397,12 +403,18 @@ export default class index extends Component {
                                                     </div>
                                                 </div>
                                             ) : (
-                                                <div
-                                                    className="user__unlogin"
-                                                    onClick={toggleModal}
-                                                >
-                                                    Login in
-                                                </div>
+                                                <>
+                                                    <button
+                                                        className="userunlogin__fakebutton__humburgermenu"
+                                                        onClick={toggleModal}
+                                                    ></button>
+                                                    <div
+                                                        className="user__unlogin"
+                                                        onClick={toggleModal}
+                                                    >
+                                                        Login in
+                                                    </div>
+                                                </>
                                             )}
                                         </div>
                                     </li>

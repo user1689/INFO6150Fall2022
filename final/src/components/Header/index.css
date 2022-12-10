@@ -236,6 +236,16 @@ header .menubar__menu .dropdown {
     background-color: transparent;
 }
 
+.userunlogin__fakebutton__humburgermenu {
+    top: 4.85rem;
+    left: 4.95rem;
+    height: 3rem;
+    width: 4rem;
+    position: absolute;
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
 .button__wrapper {
     margin-left: 0.25rem;
 }
