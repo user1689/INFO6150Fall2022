@@ -1,0 +1,69 @@
+/* card */
+
+.card {
+    /* settings for grid  */
+    grid-column: span 12;
+
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+
+    border: 1.8px solid black;
+    border-bottom: 4px solid black;
+    margin: 1rem 0.5rem 0.5rem 0.5rem;
+    font-weight: 200;
+}
+
+.card__img {
+    margin: 2rem;
+}
+
+.card__img img {
+    width: 100%;
+    height: auto;
+}
+
+.card h3{
+    text-align: center;
+}
+
+.card__title {
+    font-size: 1.4rem;
+}
+
+.card p {
+    text-align: center;
+    padding: 0 1rem;
+    font-size: 1.4rem;
+}
+
+.card__button {
+    padding: 0.8rem;
+    margin: 1rem;
+    width: fit-content;
+    justify-self: center;
+
+    background-color: orange;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+}
+
+.dark__card {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.dark__button {
+    background-color: #b48bf8;
+    color: color;
+}
+
+@media (min-width: 44rem) {
+    .card {
+        /* settings for grid  */
+        grid-column: span 4;
+    }
+
+    .card__detail {
+        grid-column: span 1;
+    }
+}

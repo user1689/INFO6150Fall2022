@@ -1,0 +1,31 @@
+/* form */
+
+.model__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__title {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.form__title h2 {
+  margin-left: 3rem;
+  grid-column: span 11;
+}
+
+.input__content {
+  height: 5.5rem;
+}
+
+.close {
+  grid-column: span 1;
+  margin-top: 0.3rem;
+  margin-left: 0.9rem;
+}
+
+.error {
+  font-size: 1.2rem;
+  color: red;
+}

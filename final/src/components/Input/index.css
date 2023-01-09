@@ -1,0 +1,39 @@
+/* input box  */
+
+.input {
+  display: grid;
+  grid-template-columns: auto;
+
+  height: 12rem;
+  width: 100%;
+  margin: 1rem 0 2rem 0;
+}
+
+.input span {
+  font-style: italic;
+}
+
+.input__box {
+  width: 100%;
+}
+
+.input__box input {
+  width: 100%;
+  height: 2rem;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 1.2rem;
+  border: transparent;
+  border: 2px black solid;
+}
+
+.input__box input:focus {
+  border-color: black;
+}
+
+.input__name {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 520;
+}

@@ -1,0 +1,56 @@
+#body {
+    /*
+
+  settings for grid
+
+  */
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100%;
+    width: 100%;
+    color: black;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: black;
+}
+
+.dark__body {
+    background-color: #121212;
+}
+
+.dark__background {
+    background-color: #b48bf8;
+}
+
+.light__background {
+    background-color: orange;
+}
+
+/* skip link */
+
+/* settings for prefers-reduced-motion  */
+
+@media (prefers-reduced-motion: no-preference) {
+    .skiplink {
+        font-size: 1.2rem;
+        left: 50%;
+        position: absolute;
+        transform: translateY(-100%);
+        transition: transform;
+        z-index: 88;
+    }
+
+    .skiplink:focus {
+        transform: translateY(0%);
+    }
+}

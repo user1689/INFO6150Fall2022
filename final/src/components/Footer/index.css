@@ -1,0 +1,45 @@
+/* footer */
+
+.footer {
+  background-color: orange;
+  width: 100%;
+}
+
+.footer__items {
+  /* settings for grid  */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.footer__items li {
+  /* settings for grid  */
+  grid-column: span 12;
+
+  margin: 1rem;
+  text-align: center;
+}
+
+.footer__items li a {
+  font-size: 1rem;
+  /* color: black; */
+}
+
+.dark__footer {
+  background-color: #1e1e1e;
+  color: #b48bf8;
+}
+
+
+
+
+/* media */
+
+@media (min-width: 44rem) {
+  
+  /* footer */
+
+  .footer__items li {
+      /* settings for grid  */
+      grid-column: span 4;
+  }
+}
